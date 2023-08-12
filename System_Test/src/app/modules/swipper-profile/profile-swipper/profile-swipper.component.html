@@ -1,0 +1,35 @@
+<mat-toolbar>
+	<button backButton mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+	 <mat-icon>keyboard_backspace</mat-icon>
+   </button>
+   <span>Daily Recommendations</span>
+</mat-toolbar>
+
+<div class="tinder" *ngIf="profileList">
+    <div class="tinder--cards" (pan)="handlePan($event)" (panend)="handlePanEnd($event)">
+        <div #tinderCard class="tinder--card" (transitionend)="handleShift()"
+            *ngFor="let card of profileList; let i = index" [ngStyle]="{
+          zIndex: profileList.length - i,
+          transform: 'scale(' + (20 - i) / 20 + ') translateY(-' + 20 * i + 'px)'
+        }">
+            <img #tinderCardImage class="profile-img" [src]="card.img[0]"
+                (load)="tinderCardImage.style.opacity = '1'" />
+            <p><span class="verified" *ngIf="card.verified"><mat-icon class="verified-icon">verified_user</mat-icon> <span class="verify-font">Verified</span></span> <span
+                    class="premium" *ngIf="card.premium"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
+                        <path fill="currentColor"
+                            d="M12 2C6.47 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8s-3.58 8-8 8m-4-6L7 8l3 2l2-3l2 3l3-2l-1 6H8m.56 2c-.34 0-.56-.22-.56-.56V15h8v.44c0 .34-.22.56-.56.56H8.56Z" />
+                    </svg> Premium NRI</span></p>
+            <h3>{{ card.name }}</h3>
+            <p>{{ card.address }}</p>
+            <mat-divider></mat-divider>
+            <div class="text">
+            <button class="radius" (click)="userClickedButton($event, true,true)" mat-stroked-button color=""><mat-icon>grade</mat-icon>Shortlist</button>
+            <span class="text-span">Like her?</span>
+            <button class="radius" (click)="userClickedButton($event, false)" mat-stroked-button color=""><mat-icon>clear</mat-icon></button>
+            <button class="radius color" (click)="userClickedButton($event, true)"  mat-flat-button color="orange"><mat-icon>done</mat-icon></button>
+            </div>
+        </div>
+    </div>
+</div>

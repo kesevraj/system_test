@@ -1,0 +1,59 @@
+<div class="main-div"><mat-card class="example-card" *ngIf="profileDetails">
+    <div class="button-left-arrow">
+    <button backButton mat-icon-button  aria-label="Example icon-button with menu icon">
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+      <span class="text-id">M7855{{profileDetails.id}}</span>
+    </div>
+    <mat-card-content class="mat-card-content">
+        <ngb-carousel *ngIf="profileDetails">
+            <ng-template ngbSlide *ngFor="let slide of profileDetails.img">
+                <div class="wrapper" id="myCarousel" class="carousel slide" data-bs-interval="false" data-bs-touch="true" data-bs-ride="carousel">
+              <img *ngIf="slide" class="img-height" [src]="slide" alt="Random first slide">
+              <img *ngIf="!slide" class="img-height" src="assets/images/skeleton-img.jpg" alt="Random first slide">
+              </div>
+            </ng-template>
+            </ngb-carousel>
+      <div class="content"><h1>{{profileDetails.name}}</h1>
+      <p>{{profileDetails.age}} yrs , {{profileDetails.address}}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+<!-- 
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide> 
+      <div class="slide">
+        <img src="https://picsum.photos/id/905/400/300.jpg">
+      </div>
+  
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <img src="https://picsum.photos/id/507/400/300.jpg">
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <img src="https://picsum.photos/id/609/400/300.jpg">
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <img src="https://picsum.photos/id/995/400/300.jpg">
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <img src="https://picsum.photos/id/1054/400/300.jpg">
+      </div>
+    </ng-template>
+  </owl-carousel-o> -->
+<!-- 
+  <div class="wrapper" *ngIf="profileDetails">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template class="slide" carouselSlide *ngFor="let slide of profileDetails.img">
+          <img [src]="slide" > {{slide}}
+        </ng-template>
+    </owl-carousel-o>  
+  </div> -->
+  </div>

@@ -1,0 +1,75 @@
+[
+    {
+        "id":1,
+        "name":"swathi",
+        "age":27,
+        "address":"No:3,Plot No:560 8th main road , chennai-39",
+        "img":["assets/images/download1.jpg","assets/images/download1.jpg","assets/images/download1.jpg"],
+        "verified":true,
+        "premium":true
+    },
+    {
+        "id":2,
+        "name":"suhirtha",
+        "age":25,
+        "address":"No:4,Plot No:561 9th main road , chennai-48",
+        "img":["assets/images/download2.jpg","",""],
+        "verified":true,
+        "premium":true
+    },
+    {
+        "id":3,
+        "name":"jasmine",
+        "age":27,
+        "address":"No:8,Plot no:578 11th main road , chennai-37",
+        "img":["assets/images/download3.jpg","",""],
+        "verified":true,
+        "premium":true
+    },
+    {
+        "id":4,
+        "name":"divya",
+        "age":24,
+        "address":"No:12,Plot no:574 78th main road , chennai-75",
+        "img":["assets/images/download8.jpg","",""],
+        "verified":true,
+        "premium":true
+    },
+    {
+        "id":5,
+        "name":"priya",
+        "age":27,
+        "address":"No:88,Plot no:555 1th main road , chennai-52",
+        "img":["assets/images/download4.jpg","",""],
+        "verified":true,
+        "premium":true
+    },
+    {
+        "id":6,
+        "name":"bhavani",
+        "age":26,
+        "address":"No:78,Plot no:542 5th main road , chennai-37",
+        "img":["assets/images/download5.jpg","",""],
+        "verified":true,
+        "premium":true
+    },
+    {
+        "id":7,
+        "name":"jessy",
+        "age":27,
+        "address":"No:75,Plot no:523 8th main road , chennai-118",
+        "img":["assets/images/download6.jpg","",""],
+        "verified":true,
+        "premium":true
+    },
+    {
+        "id":8,
+        "name":"ritu",
+        "age":23,
+        "address":"No:31,Plot no:564 7th main road , chennai-38",
+        "img":["assets/images/download7.jpg","",""],
+        "verified":true,
+        "premium":true
+    }
+
+]

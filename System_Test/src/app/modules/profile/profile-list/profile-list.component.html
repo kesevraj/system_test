@@ -1,0 +1,40 @@
+<div class="bg-color" *ngIf="profileList">
+	<mat-toolbar>
+		<mat-toolbar-row>
+			<span>My Matches</span>
+			<span class="example-spacer"></span>
+			<mat-icon class="" aria-hidden="false" aria-label="Example user verified icon">more_vert</mat-icon>
+		</mat-toolbar-row>
+		<mat-toolbar-row class="toolbar-row">
+			<span>{{profileList.length}} Profiles pending with me <button class="radius border-white"
+					mat-stroked-button>5 NEW</button></span>
+		</mat-toolbar-row>
+	</mat-toolbar>
+
+	<div class="scrolling-wrapper">
+		<drag-scroll class='scroll-height' #nav [scroll-x-wheel-enabled]="true">
+		<div *ngFor="let slide of profileList" drag-scroll-item>
+			<mat-card class="example-card card">
+				<img class="profile-img" mat-card-image [src]="slide.img[0]" [alt]="slide.id" [title]="slide.id"
+					[routerLink]="'details/'+slide.id">
+				<mat-card-content>
+					<h1 class="break">{{slide.name}}</h1>
+					<p class="break">{{slide.age}} yrs , {{slide.address}}</p>
+				</mat-card-content>
+				<mat-card-actions>
+					<button class="radius color" mat-flat-button color="orange"
+						[routerLink]="'details/'+slide.id">Yes</button>
+					<button class="radius" mat-stroked-button color="">No</button>
+				</mat-card-actions>
+			</mat-card>
+		</div>
+		</drag-scroll>
+	</div>
+</div>
+
+<!-- <swiper-container>
+	<swiper-slide>Slide 1</swiper-slide>
+	<swiper-slide>Slide 2</swiper-slide>
+	<swiper-slide>Slide 3</swiper-slide>
+	... 
+  </swiper-container> -->

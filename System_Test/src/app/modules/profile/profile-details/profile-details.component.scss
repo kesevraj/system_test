@@ -1,0 +1,56 @@
+h1 {
+    margin: 4px 0px !important;
+}
+
+.main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.example-card{
+    margin: 0px 30px 30px !important;
+    border-radius: 15px;
+    width:50%;
+}
+
+
+.mat-card-content{
+    padding:0!important;
+}
+.content{
+    margin:20px;
+}
+.button-left-arrow{ 
+    position:absolute !important; 
+    top: 10px !important; 
+    left:0px !important;
+    z-index:10 !important;
+    color: white !important;
+ }
+
+.text-id{
+    position:absolute !important; 
+    top: 12px !important; 
+ }
+
+ .img-height{
+    height: 400px !important;
+    width:100% !important;
+ }
+
+::ng-deep .container-fluid { padding:0 !important; }
+
+@media (min-width: 300px) and (max-width: 768px) {
+   .example-card {
+        width: 100% !important;
+       
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+        .example-card {
+            width: 100% !important;  
+        }
+    }
